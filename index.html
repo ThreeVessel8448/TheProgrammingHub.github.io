@@ -13,6 +13,7 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         header {
@@ -80,6 +81,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .project:hover {
@@ -119,6 +121,23 @@
             background-color: #182848;
         }
 
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #4b6cb7;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #182848;
+        }
+
         footer {
             text-align: center;
             padding: 1.5rem;
@@ -138,7 +157,32 @@
         footer a:hover {
             color: #182848;
         }
+
+        footer .socials {
+            margin: 1rem 0;
+        }
+
+        footer .socials a {
+            margin: 0 1rem;
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .socials a:hover {
+            color: #4b6cb7;
+        }
     </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -161,8 +205,15 @@
         </div>
         <!-- Add more project sections as needed -->
     </main>
+    <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑ Back to Top
+    </div>
     <footer>
-        <p>&copy; 2024 TheProgrammingHub | <a href="https://github.com/ThreeVessel8448" target="_blank">GitHub</a> | <a href="https://instagram.com/theprogramminghub3" target="_blank">Instagram</a></p>
+        <p>&copy; 2024 TheProgrammingHub</p>
+        <div class="socials">
+            <a href="https://github.com/ThreeVessel8448" target="_blank">GitHub</a>
+            <a href="https://instagram.com/theprogramminghub3" target="_blank">Instagram</a>
+        </div>
     </footer>
 </body>
 </html>
