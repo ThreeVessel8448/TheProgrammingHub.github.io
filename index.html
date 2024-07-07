@@ -72,7 +72,26 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        main {
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4b6cb7;
+        }
+
+        section {
             padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -170,7 +189,17 @@
         <p>Your hub for all things coding and tech</p>
         <img src="path/to/file-s34ZpCxYq8jYbhb9R6aRMWZb.png" alt="Programming Hub Logo">
     </header>
-    <main>
+    <nav>
+        <a href="#who-am-i">Who Am I</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section id="who-am-i">
+        <h2>Who Am I</h2>
+        <p>Hello! I'm the creator of TheProgrammingHub. I'm passionate about coding, technology, and creating projects that can help others. I specialize in developing user-friendly applications and tools, primarily using batch scripting, Python, and web technologies. My goal is to share my knowledge and projects with the community to inspire and assist others in their coding journeys.</p>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
         <div class="project">
             <img src="path/to/file-a25VitNJScn2x5t3UJjPPufW.png" alt="OmniGuard Antivirus">
             <div>
@@ -185,7 +214,16 @@
             <a href="link-to-project" target="_blank">Download/Visit</a>
         </div>
         <!-- Add more project sections as needed -->
-    </main>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>You can reach me through the following platforms:</p>
+        <ul>
+            <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/theprogramminghub3" target="_blank">theprogramminghub3</a></li>
+            <li>GitHub: <a href="https://github.com/ThreeVessel8448" target="_blank">ThreeVessel8448</a></li>
+        </ul>
+    </section>
     <footer>
         <p>&copy; 2024 TheProgrammingHub | 
             <a href="https://github.com/ThreeVessel8448" target="_blank">
@@ -198,7 +236,7 @@
     </footer>
     <script>
         // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
