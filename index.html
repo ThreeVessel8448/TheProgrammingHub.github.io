@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
@@ -13,7 +14,6 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            scroll-behavior: smooth;
         }
 
         header {
@@ -54,6 +54,12 @@
             font-size: 1.5rem;
             margin-top: 0.5rem;
             animation: fadeInUp 2s;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            margin-top: 1rem;
         }
 
         @keyframes fadeInDown {
@@ -121,23 +127,6 @@
             background-color: #182848;
         }
 
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: #4b6cb7;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            display: none;
-            transition: background-color 0.3s;
-        }
-
-        .back-to-top:hover {
-            background-color: #182848;
-        }
-
         footer {
             text-align: center;
             padding: 1.5rem;
@@ -152,42 +141,34 @@
             color: #4b6cb7;
             text-decoration: none;
             transition: color 0.3s;
+            margin: 0 10px;
         }
 
         footer a:hover {
             color: #182848;
         }
 
-        footer .socials {
-            margin: 1rem 0;
+        footer i {
+            margin-right: 5px;
         }
 
-        footer .socials a {
-            margin: 0 1rem;
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                text-align: center;
+            }
 
-        footer .socials a:hover {
-            color: #4b6cb7;
+            .project img {
+                margin: 0 0 1rem 0;
+            }
         }
     </style>
-    <script>
-        window.addEventListener('scroll', function() {
-            const backToTopButton = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-    </script>
 </head>
 <body>
     <header>
         <h1>Welcome to TheProgrammingHub</h1>
         <p>Your hub for all things coding and tech</p>
+        <img src="path/to/image/file-s34ZpCxYq8jYbhb9R6aRMWZb.png" alt="Programming Hub Logo">
     </header>
     <main>
         <div class="project">
@@ -205,15 +186,26 @@
         </div>
         <!-- Add more project sections as needed -->
     </main>
-    <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-        ↑ Back to Top
-    </div>
     <footer>
-        <p>&copy; 2024 TheProgrammingHub</p>
-        <div class="socials">
-            <a href="https://github.com/ThreeVessel8448" target="_blank">GitHub</a>
-            <a href="https://instagram.com/theprogramminghub3" target="_blank">Instagram</a>
-        </div>
+        <p>&copy; 2024 TheProgrammingHub | 
+            <a href="https://github.com/ThreeVessel8448" target="_blank">
+                <i class="fab fa-github"></i>GitHub
+            </a> | 
+            <a href="https://instagram.com/theprogramminghub3" target="_blank">
+                <i class="fab fa-instagram"></i>Instagram
+            </a>
+        </p>
     </footer>
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
