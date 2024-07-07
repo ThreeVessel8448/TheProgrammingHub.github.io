@@ -95,6 +95,11 @@
             padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            display: none;
+        }
+
+        section.active {
+            display: block;
         }
 
         .project {
@@ -190,10 +195,15 @@
         <img src="path/to/file-s34ZpCxYq8jYbhb9R6aRMWZb.png" alt="Programming Hub Logo">
     </header>
     <nav>
-        <a href="#who-am-i">Who Am I</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#who-am-i" onclick="showSection('who-am-i')">Who Am I</a>
+        <a href="#projects" onclick="showSection('projects')">Projects</a>
+        <a href="#contact" onclick="showSection('contact')">Contact Us</a>
     </nav>
+    <section id="home" class="active">
+        <h2>Home</h2>
+        <p>Welcome to TheProgrammingHub! Here you can find information about my projects, learn more about me, and get in touch.</p>
+    </section>
     <section id="who-am-i">
         <h2>Who Am I</h2>
         <p>Hello! I'm the creator of TheProgrammingHub. I'm passionate about coding, technology, and creating projects that can help others. I specialize in developing user-friendly applications and tools, primarily using batch scripting, Python, and web technologies. My goal is to share my knowledge and projects with the community to inspire and assist others in their coding journeys.</p>
@@ -216,10 +226,10 @@
         <!-- Add more project sections as needed -->
     </section>
     <section id="contact">
-        <h2>To Contact Us</h2>
+        <h2>Contact Us</h2>
         <p>You can reach me through the following platforms:</p>
         <ul>
-            <li>Email: <a href="mailto:theprogramhubspprt@gmail.com">youremail@example.com</a></li>
+            <li>Email: <a href="mailto: theprogramhubspprt@gmail.com.com">youremail@example.com</a></li>
             <li>Instagram: <a href="https://instagram.com/theprogramminghub3" target="_blank">theprogramminghub3</a></li>
             <li>GitHub: <a href="https://github.com/ThreeVessel8448" target="_blank">ThreeVessel8448</a></li>
         </ul>
@@ -235,15 +245,12 @@
         </p>
     </footer>
     <script>
-        // Smooth Scrolling
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
             });
-        });
+            document.getElementById(sectionId).classList.add('active');
+        }
     </script>
 </body>
 </html>
