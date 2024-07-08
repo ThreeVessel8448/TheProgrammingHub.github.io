@@ -7,135 +7,172 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
 
-header {
-    background-color: #1e3c72;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
+        header {
+            background-color: #1e3c72;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-nav {
-    position: relative;
-}
+        nav {
+            position: relative;
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-nav ul li {
-    float: left;
-}
+        nav ul li {
+            float: left;
+        }
 
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-nav ul li a:hover {
-    background-color: #111;
-}
+        nav ul li a:hover {
+            background-color: #111;
+        }
 
-nav .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    padding: 14px 16px;
-}
+        nav .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            padding: 14px 16px;
+        }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 50px;
-        width: 100%;
-        background-color: #333;
-    }
-    
-    nav ul li {
-        float: none;
-        width: 100%;
-    }
-    
-    nav .menu-icon {
-        display: block;
-    }
-}
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 50px;
+                width: 100%;
+                background-color: #333;
+            }
 
-section {
-    display: none;
-    padding: 60px 20px;
-    margin: 20px 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+            nav ul li {
+                float: none;
+                width: 100%;
+            }
 
-section.active {
-    display: block;
-}
+            nav .menu-icon {
+                display: block;
+            }
+        }
 
-.logo {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto 20px;
-}
+        section {
+            display: none;
+            padding: 60px 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-h1, h2 {
-    text-align: center;
-}
+        section.active {
+            display: block;
+        }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #1e3c72;
-    color: white;
-}
+        .logo {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+        h1, h2 {
+            text-align: center;
+        }
 
-.contact-form label {
-    font-weight: bold;
-}
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #1e3c72;
+            color: white;
+        }
 
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-.contact-form button {
-    padding: 10px;
-    border: none;
-    background-color: #1e3c72;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-}
+        .contact-form label {
+            font-weight: bold;
+        }
 
-.contact-form button:hover {
-    background-color: #14508e;
-}</style>
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            background-color: #1e3c72;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .contact-form button:hover {
+            background-color: #14508e;
+        }
+
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .project a:hover {
+            background-color: #14508e;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -163,24 +200,28 @@ footer {
             <h2>Join Our Community</h2>
             <p>Join our community of tech enthusiasts, participate in discussions, and collaborate on exciting projects. Sign up for our newsletter for regular updates.</p>
         </section>
-        
+
         <section id="whoami">
             <h2>Who Am I</h2>
             <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
-            <p>Hello! We're the programming hub, a passionate developers and tech enthusiasts. Welcome to our hub!</p>
+            <p>Hello! We're the programming hub, passionate developers and tech enthusiasts. Welcome to our hub!</p>
             <p>[Detailed information about yourself, your background, your journey in tech, and your goals]</p>
             <h3>We're Capable of:</h3>
             <ul>
                 <li>Web Development</li>
                 <li>Mobile App Development</li>
                 <li>Artificial Intelligence</li>
-                <li>Languages:.Batch 
-                              .HTML and CSS
-                              .Phyton and more!!</li>
+                <li>Languages:
+                    <ul>
+                        <li>Batch</li>
+                        <li>HTML and CSS</li>
+                        <li>Python and more!!</li>
+                    </ul>
+                </li>
                 <li>We Can Help You If You Want To 🙂</li>
             </ul>
         </section>
-        
+
         <section id="projects">
             <h2>Projects</h2>
             <p>Here are some of my projects that I am proud to showcase:</p>
@@ -188,21 +229,19 @@ footer {
                 <div class="project">
                     <img src="project1.jpg" alt="Project 1">
                     <h3>OmniGuard Antivirus</h3>
-             <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
-                    href="https://github.com /ThreeVessel8448/OmniGuard-Antivirus"
-target="_blank">Download/Visit</a>
+                    <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
+                    <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
                 </div>
                 <div class="project">
                     <img src="project2.jpg" alt="Project 2">
                     <h3>Coming soon!</h3>
                     <p>Wait Have a cup of coffee, It's Coming soon. . .</p>
-                    href="link-to-project"
-                    target="_blank">Learn More</a>
+                    <a href="link-to-project" target="_blank">Learn More</a>
                 </div>
                 <!-- Add more projects as needed -->
             </div>
         </section>
-        
+
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Have questions or want to collaborate? Reach out to us!</p>
@@ -226,7 +265,7 @@ target="_blank">Download/Visit</a>
     </footer>
     <script>
         function toggleMenu() {
-            var menu = document.getElementById('menu');
+            varmenu = document.getElementById('menu');
             if (menu.style.display === 'block') {
                 menu.style.display = 'none';
             } else {
