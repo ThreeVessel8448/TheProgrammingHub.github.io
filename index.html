@@ -4,242 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheProgrammingHub</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa;
+            background-color: #f0f0f0;
             color: #333;
         }
-
+        
         header {
-            background: #002b36;
-            color: white;
-            padding: 4rem 2rem;
+            background-color: #1a2a3a;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            position: relative;
         }
-
+        
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
-            font-weight: 600;
-            animation: fadeInDown 2s;
+            font-size: 2.5em;
         }
-
+        
         header p {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-            animation: fadeInUp 2s;
+            margin: 5px 0 20px;
         }
-
-        header img {
-            width: 150px;
-            height: auto;
-            margin-top: 1rem;
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        
         nav {
-            background-color: #073642;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+            background-color: #1a2a3a;
+            padding: 10px 0;
         }
-
-        nav a {
-            color: white;
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-size: 1.2em;
         }
-
-        nav a:hover {
-            color: #268bd2;
+        
+        nav ul li a:hover {
+            text-decoration: underline;
         }
-
+        
         section {
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: none;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        section.active {
-            display: block;
-        }
-
-        .project {
-            background-color: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .project img {
-            width: 100px;
-            height: auto;
-            margin-right: 2rem;
-            border-radius: 8px;
-        }
-
-        .project h2 {
+        
+        section h2 {
             margin-top: 0;
-            color: #268bd2;
-            font-weight: 500;
         }
-
-        .project p {
-            line-height: 1.6;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #268bd2;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .project a:hover {
-            background-color: #073642;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #002b36;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: #268bd2;
-            text-decoration: none;
-            transition: color 0.3s;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            color: #073642;
-        }
-
-        footer i {
-            margin-right: 5px;
-        }
-
-        .welcome {
-            text-align: center;
-            padding: 3rem 0;
-            background-color: #f5f5f5;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .welcome h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #002b36;
-        }
-
-        .welcome p {
-            font-size: 1.2rem;
-            color: #333;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .featured-projects {
+        
+        .project {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 3rem;
+            align-items: center;
+            margin-bottom: 20px;
         }
-
-        .featured-projects .project {
-            width: 45%;
-            margin-bottom: 2rem;
+        
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
         }
-
-        .quick-links {
+        
+        .project div {
+            flex: 1;
+        }
+        
+        .project h2 {
+            margin: 0;
+        }
+        
+        footer {
+            background-color: #1a2a3a;
+            color: #fff;
             text-align: center;
-            padding: 2rem 0;
-            background-color: #f5f5f5;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        footer p {
+            margin: 5px 0;
         }
 
-        .quick-links h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #002b36;
-        }
-
-        .quick-links a {
-            display: inline-block;
-            margin: 0.5rem 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #268bd2;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .quick-links a:hover {
-            background-color: #073642;
-        }
-
+        /* Responsive styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2em;
             }
 
-            header p {
-                font-size: 1.2rem;
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 1em;
             }
 
             .project {
                 flex-direction: column;
-                text-align: center;
             }
 
             .project img {
-                margin: 0 0 1rem 0;
+                margin: 0 0 10px 0;
+                width: 100%;
             }
 
-            .featured-projects .project {
-                width: 100%;
+            .project div {
+                text-align: center;
+            }
+
+            .project h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.2em;
+            }
+
+            .project h2 {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -248,41 +160,19 @@
     <header>
         <h1>TheProgrammingHub</h1>
         <p>Your hub for all coding and tech interests</p>
-        <img src="/mnt/data/file-knACXvO4Wf11Xfqv9eF4SEEZ" alt="Programming Hub Logo">
+        <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="Programming Hub Logo" style="max-width: 200px;">
     </header>
     <nav>
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#who-am-i" onclick="showSection('who-am-i')">Who Am I</a>
-        <a href="#projects" onclick="showSection('projects')">Projects</a>
-        <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#who-am-i" onclick="showSection('who-am-i')">Who Am I</a></li>
+            <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+        </ul>
     </nav>
     <section id="home" class="active">
-        <div class="welcome">
-            <h2>Welcome to TheProgrammingHub!</h2>
-            <p>Explore a world of coding, technology, and innovative projects. Here you can find detailed information about my work, get to know me better, and contact me for collaborations or inquiries.</p>
-        </div>
-        <h2>Featured Projects</h2>
-        <div class="featured-projects">
-            <div class="project">
-                <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="OmniGuard Antivirus">
-                <div>
-                    <h2>OmniGuard Antivirus</h2>
-                    <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
-                    <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
-                </div>
-            </div>
-            <div class="project">
-                <h2>Coming Soon!</h2>
-                <p>Coming Soon. . .</p>
-                <a href="link-to-project" target="_blank">Download/Visit</a>
-            </div>
-        </div>
-        <div class="quick-links">
-            <h2>Quick Links</h2>
-            <a href="#who-am-i" onclick="showSection('who-am-i')">About Me</a>
-            <a href="#projects" onclick="showSection('projects')">My Projects</a>
-            <a href="#contact" onclick="showSection('contact')">Contact</a>
-        </div>
+        <h2>Welcome to TheProgrammingHub</h2>
+        <p>Explore a world of coding, technology, and innovative projects. Here you can find detailed information about my work, get to know me better, and contact me for collaborations or inquiries.</p>
     </section>
     <section id="who-am-i">
         <h2>Who Am I?</h2>
@@ -308,7 +198,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions, suggestions, or collaboration ideas, feel free to reach out to me. I'm always open to connecting with fellow developers and tech enthusiasts.</p>
-        <p>Email: <a href="mailto: theprogramhubspprt@gmail.com">theprogramhubspprt@gmail.com</a></p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
         <p>Follow me on social media for the latest updates and projects:</p>
         <p>
             <a href="https://instagram.com/theprogramminghub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
