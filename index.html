@@ -6,270 +6,150 @@
     <title>TheProgrammingHub</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        header {
-            background: linear-gradient(45deg, #1a2a3a, #3a4a5a);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-        header p {
-            margin: 5px 0 20px;
-        }
+nav ul li {
+    float: left;
+}
 
-        nav {
-            background-color: #1a2a3a;
-            padding: 10px 0;
-        }
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
+nav ul li a:hover {
+    background-color: #111;
+}
 
-        nav ul li {
-            margin: 0 20px;
-        }
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
+.logo {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
 
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
+h1, h2 {
+    text-align: center;
+}
 
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1e3c72;
+    color: white;
+}
 
-        section h2 {
-            margin-top: 0;
-        }
-
-        .project {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .project img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-right: 20px;
-            transition: transform 0.3s;
-        }
-
-        .project img:hover {
-            transform: scale(1.05);
-        }
-
-        .project div {
-            flex: 1;
-        }
-
-        .project h2 {
-            margin: 0;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #1a2a3a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .project a:hover {
-            background-color: #ffcc00;
-        }
-
-        footer {
-            background-color: #1a2a3a;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            nav ul li {
-                margin: 0 10px;
-            }
-
-            nav ul li a {
-                font-size: 1em;
-            }
-
-            .project {
-                flex-direction: column;
-            }
-
-            .project img {
-                margin: 0 0 10px 0;
-                width: 100%;
-            }
-
-            .project div {
-                text-align: center;
-            }
-
-            .project h2 {
-                font-size: 1.5em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            nav ul li a {
-                font-size: 1.2em;
-            }
-
-            .project h2 {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+@media (max-width: 768px) {
+    nav ul li {
+        float: none;
+        width: 100%;
+    }
+}</style>
 </head>
 <body>
     <header>
-        <h1>TheProgrammingHub</h1>
-        <p>Your hub for all coding and tech interests</p>
-        <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="Programming Hub Logo" style="max-width: 200px;">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#whoami">Who Am I</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home" onclick="showSection('home')">Home</a></li>
-            <li><a href="#who-am-i" onclick="showSection('who-am-i')">Who Am I</a></li>
-            <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section id="home" class="active">
-        <h2>Welcome to TheProgrammingHub</h2>
-        <p>Explore a world of coding, technology, and innovative projects. Here you can find detailed information about my work, get to know me better, and contact me for collaborations or inquiries.</p>
-    </section>
-    <section id="who-am-i">
-        <h2>Who Am I?</h2>
-        <p>Welcome to TheProgrammingHub! I am a passionate developer with a love for coding, technology, and innovation. I enjoy creating projects that solve real-world problems and make life easier for users. Whether you're a fellow developer, a tech enthusiast, or just curious about my work, you're in the right place!</p>
-        <p>Feel free to explore my projects, learn more about my journey, and don't hesitate to reach out for collaborations or inquiries.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="OmniGuard Antivirus">
-            <div>
-                <h2>OmniGuard Antivirus</h2>
-                <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
-                <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
+    <main>
+        <section id="home">
+            <img src="your-logo.png" alt="Programming Hub Logo" class="logo">
+            <h1>TheProgrammingHub</h1>
+            <p>Your hub for all coding and tech interests</p>
+            <h2>Welcome to TheProgrammingHub</h2>
+            <p>Explore a world of coding, technology, and innovative projects. Here you can find detailed information about my work, get to know me better, and contact me for collaborations or inquiries.</p>
+            <h2>Latest Updates</h2>
+            <p>Stay tuned for the latest updates on my projects, tutorials, and coding tips.</p>
+            <h2>Featured Projects</h2>
+            <p>Check out some of my featured projects in the Projects section. From web development to AI, explore the diverse range of my work.</p>
+            <h2>Join Our Community</h2>
+            <p>Join our community of tech enthusiasts, participate in discussions, and collaborate on exciting projects. Sign up for our newsletter for regular updates.</p>
+        </section>
+        
+        <section id="whoami">
+            <h2>Who Am I</h2>
+            <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
+            <p>Hello! I'm [Your Name], a passionate developer and tech enthusiast. Welcome to my hub!</p>
+            <p>[Detailed information about yourself, your background, your journey in tech, and your goals]</p>
+            <h3>My Skills</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Mobile App Development</li>
+                <li>Artificial Intelligence</li>
+                <li>Game Development</li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of my projects that I am proud to showcase.</p>
+            <div class="project-gallery">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of Project 1.</p>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of Project 2.</p>
+                </div>
+                <!-- Add more projects as needed -->
             </div>
-        </div>
-        <div class="project">
-            <h2>Coming Soon!</h2>
-            <p>Stay tuned for more exciting projects that are currently in development. Check back soon for updates!</p>
-            <a href="link-to-project" target="_blank">Learn More</a>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, suggestions, or collaboration ideas, feel free to reach out to me. I'm always open to connecting with fellow developers and tech enthusiasts.</p>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>Follow me on social media for the latest updates and projects:</p>
-        <p>
-            <a href="https://instagram.com/theprogramminghub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://github.com/ThreeVessel8448" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </p>
-    </section>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to collaborate? Reach out to us!</p>
+            <form action="submit_contact_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 TheProgrammingHub. All rights reserved.</p>
-        <p>Follow us on: 
-            <a href="https://instagram.com/theprogramminghub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
-            <a href="https://github.com/ThreeVessel8448" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </p>
     </footer>
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList
-            .add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetSection = this.getAttribute('href').substring(1);
-                    showSection(targetSection);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
