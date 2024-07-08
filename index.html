@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f0f4f8;
             color: #333;
         }
-        
+
         header {
-            background-color: #1a2a3a;
+            background: linear-gradient(45deg, #1a2a3a, #3a4a5a);
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        
+
         header p {
             margin: 5px 0 20px;
         }
-        
+
         nav {
             background-color: #1a2a3a;
             padding: 10px 0;
         }
-        
+
         nav ul {
             list-style-type: none;
             margin: 0;
@@ -42,63 +43,100 @@
             display: flex;
             justify-content: center;
         }
-        
+
         nav ul li {
             margin: 0 20px;
         }
-        
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2em;
+            transition: color 0.3s;
         }
-        
+
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
-        
+
         section {
             padding: 20px;
             margin: 20px 0;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        
+
         section h2 {
             margin-top: 0;
         }
-        
+
         .project {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
-        
+
         .project img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-right: 20px;
+            transition: transform 0.3s;
         }
-        
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
         .project div {
             flex: 1;
         }
-        
+
         .project h2 {
             margin: 0;
         }
-        
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #1a2a3a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .project a:hover {
+            background-color: #ffcc00;
+        }
+
         footer {
             background-color: #1a2a3a;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         footer p {
             margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
         }
 
         /* Responsive styles */
@@ -218,8 +256,20 @@
             sections.forEach(section => {
                 section.classList.remove('active');
             });
-            document.getElementById(sectionId).classList.add('active');
+            document.getElementById(sectionId).classList
+            .add('active');
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetSection = this.getAttribute('href').substring(1);
+                    showSection(targetSection);
+                });
+            });
+        });
     </script>
 </body>
 </html>
