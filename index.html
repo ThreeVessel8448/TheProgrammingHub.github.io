@@ -157,6 +157,69 @@
             margin-right: 5px;
         }
 
+        .welcome {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #002b36;
+        }
+
+        .welcome p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 3rem;
+        }
+
+        .featured-projects .project {
+            width: 45%;
+            margin-bottom: 2rem;
+        }
+
+        .quick-links {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-links h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #002b36;
+        }
+
+        .quick-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #268bd2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .quick-links a:hover {
+            background-color: #073642;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
@@ -174,6 +237,10 @@
             .project img {
                 margin: 0 0 1rem 0;
             }
+
+            .featured-projects .project {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -190,15 +257,40 @@
         <a href="#contact" onclick="showSection('contact')">Contact Us</a>
     </nav>
     <section id="home" class="active">
-        <h2>Home</h2>
-        <p>Welcome to TheProgrammingHub! Here you can find information about my projects, learn more about me, and get in touch.</p>
+        <div class="welcome">
+            <h2>Welcome to TheProgrammingHub!</h2>
+            <p>Explore a world of coding, technology, and innovative projects. Here you can find detailed information about my work, get to know me better, and contact me for collaborations or inquiries.</p>
+        </div>
+        <h2>Featured Projects</h2>
+        <div class="featured-projects">
+            <div class="project">
+                <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="OmniGuard Antivirus">
+                <div>
+                    <h2>OmniGuard Antivirus</h2>
+                    <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
+                    <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>Coming Soon!</h2>
+                <p>Coming Soon. . .</p>
+                <a href="link-to-project" target="_blank">Download/Visit</a>
+            </div>
+        </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <a href="#who-am-i" onclick="showSection('who-am-i')">About Me</a>
+            <a href="#projects" onclick="showSection('projects')">My Projects</a>
+            <a href="#contact" onclick="showSection('contact')">Contact</a>
+        </div>
     </section>
     <section id="who-am-i">
-        <h2>Who Am I</h2>
-        <p>Hello! I'm the creator of TheProgrammingHub. I'm passionate about coding, technology, and creating projects that can help others. I specialize in developing user-friendly applications and tools, primarily using batch scripting, Python, and web technologies. My goal is to share my knowledge and projects with the community to inspire and assist others in their coding journeys.</p>
+        <h2>Who Am I?</h2>
+        <p>Welcome to TheProgrammingHub! I am a passionate developer with a love for coding, technology, and innovation. I enjoy creating projects that solve real-world problems and make life easier for users. Whether you're a fellow developer, a tech enthusiast, or just curious about my work, you're in the right place!</p>
+        <p>Feel free to explore my projects, learn more about my journey, and don't hesitate to reach out for collaborations or inquiries.</p>
     </section>
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2>Projects</h2>
         <div class="project">
             <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="OmniGuard Antivirus">
             <div>
@@ -209,32 +301,31 @@
         </div>
         <div class="project">
             <h2>Coming Soon!</h2>
-            <p>Coming Soon. . .</p>
-            <a href="link-to-project" target="_blank">Download/Visit</a>
+            <p>Stay tuned for more exciting projects that are currently in development. Check back soon for updates!</p>
+            <a href="link-to-project" target="_blank">Learn More</a>
         </div>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>You can reach me through the following platforms:</p>
-        <ul>
-            <li>Email: <a href="mailto: theprogramhubspprt@gmail.com">theprogramhubspprt@gmail.com</a></li>
-            <li>Instagram: <a href="https://instagram.com/theprogramminghub3" target="_blank">theprogramminghub3</a></li>
-            <li>GitHub: <a href="https://github.com/ThreeVessel8448" target="_blank">ThreeVessel8448</a></li>
-        </ul>
+        <p>If you have any questions, suggestions, or collaboration ideas, feel free to reach out to me. I'm always open to connecting with fellow developers and tech enthusiasts.</p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>Follow me on social media for the latest updates and projects:</p>
+        <p>
+            <a href="https://instagram.com/theprogramminghub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://github.com/ThreeVessel8448" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </p>
     </section>
     <footer>
-        <p>&copy; 2024 TheProgrammingHub | 
-            <a href="https://github.com/ThreeVessel8448" target="_blank">
-                <i class="fab fa-github"></i>GitHub
-            </a> | 
-            <a href="https://instagram.com/theprogramminghub3" target="_blank">
-                <i class="fab fa-instagram"></i>Instagram
-            </a>
+        <p>&copy; 2024 TheProgrammingHub. All rights reserved.</p>
+        <p>Follow us on: 
+            <a href="https://instagram.com/theprogramminghub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://github.com/ThreeVessel8448" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </p>
     </footer>
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
