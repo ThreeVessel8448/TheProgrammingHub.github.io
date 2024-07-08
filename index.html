@@ -6,47 +6,28 @@
     <title>TheProgrammingHub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Light blue */
+            background-color: #e0f7fa;
             color: #333;
         }
 
         header {
-            background: #1a1a2e; /* Dark blue */
+            background: #002b36;
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        header::after {
-            content: '';
-            background: rgba(255, 255, 255, 0.1);
-            width: 100%;
-            height: 200%;
-            position: absolute;
-            top: -100%;
-            left: 0;
-            transform: rotate(45deg);
-            animation: slide 5s infinite;
-        }
-
-        @keyframes slide {
-            0% { top: -100%; }
-            50% { top: 100%; }
-            100% { top: -100%; }
         }
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            font-weight: 500;
+            font-size: 3.5rem;
+            font-weight: 600;
             animation: fadeInDown 2s;
         }
 
@@ -73,7 +54,7 @@
         }
 
         nav {
-            background-color: #1a1a2e; /* Dark blue */
+            background-color: #073642;
             color: white;
             padding: 1rem;
             text-align: center;
@@ -88,7 +69,7 @@
         }
 
         nav a:hover {
-            color: #3cbaef; /* Bright blue */
+            color: #268bd2;
         }
 
         section {
@@ -106,7 +87,7 @@
             background-color: white;
             margin: 2rem 0;
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
@@ -128,7 +109,7 @@
 
         .project h2 {
             margin-top: 0;
-            color: #3cbaef; /* Bright blue */
+            color: #268bd2;
             font-weight: 500;
         }
 
@@ -140,7 +121,7 @@
             display: inline-block;
             margin-top: 1rem;
             padding: 0.75rem 1.5rem;
-            background-color: #3cbaef; /* Bright blue */
+            background-color: #268bd2;
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -148,13 +129,13 @@
         }
 
         .project a:hover {
-            background-color: #1a1a2e; /* Dark blue */
+            background-color: #073642;
         }
 
         footer {
             text-align: center;
             padding: 1.5rem;
-            background-color: #1a1a2e; /* Dark blue */
+            background-color: #002b36;
             color: white;
             position: relative;
             bottom: 0;
@@ -162,14 +143,14 @@
         }
 
         footer a {
-            color: #3cbaef; /* Bright blue */
+            color: #268bd2;
             text-decoration: none;
             transition: color 0.3s;
             margin: 0 10px;
         }
 
         footer a:hover {
-            color: white;
+            color: #073642;
         }
 
         footer i {
@@ -178,11 +159,11 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             header p {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .project {
@@ -200,7 +181,7 @@
     <header>
         <h1>Welcome to TheProgrammingHub</h1>
         <p>Your hub for all coding and tech interests</p>
-        <img src="/mnt/data/file-ZqClYqgQHwn1O9M8F3ZJOQop" alt="Programming Hub Logo">
+        <img src="/mnt/data/file-knACXvO4Wf11Xfqv9eF4SEEZ" alt="Programming Hub Logo">
     </header>
     <nav>
         <a href="#home" onclick="showSection('home')">Home</a>
@@ -231,13 +212,12 @@
             <p>Coming Soon. . .</p>
             <a href="link-to-project" target="_blank">Download/Visit</a>
         </div>
-        <!-- Add more project sections as needed -->
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
         <p>You can reach me through the following platforms:</p>
         <ul>
-            <li>Email: <a href="mailto:theprogramhubspprt@gmail.com">theprogramhubspprt@gmail.com</a></li>
+            <li>Email: <a href="mailto: theprogramhubspprt@gmail.com">theprogramhubspprt@gmail.com</a></li>
             <li>Instagram: <a href="https://instagram.com/theprogramminghub3" target="_blank">theprogramminghub3</a></li>
             <li>GitHub: <a href="https://github.com/ThreeVessel8448" target="_blank">ThreeVessel8448</a></li>
         </ul>
@@ -252,7 +232,6 @@
             </a>
         </p>
     </footer>
-
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('section').forEach(section => {
