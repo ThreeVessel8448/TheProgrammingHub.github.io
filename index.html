@@ -12,12 +12,13 @@
             padding: 0;
             background-color: #f4f4f4;
             line-height: 1.6;
+            font-size: 14px;
         }
 
         header {
-            background-color: #1e3c72;
+            background-color: #1e3c72; /* Match your logo colors */
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
 
@@ -43,10 +44,11 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #111;
+            background-color: #1e3c72;
         }
 
         nav .menu-icon {
@@ -83,10 +85,15 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         section.active {
             display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .logo {
@@ -265,7 +272,7 @@
     </footer>
     <script>
         function toggleMenu() {
-            varmenu = document.getElementById('menu');
+            var menu = document.getElementById('menu');
             if (menu.style.display === 'block') {
                 menu.style.display = 'none';
             } else {
