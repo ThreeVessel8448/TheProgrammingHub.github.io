@@ -12,13 +12,12 @@
             padding: 0;
             background-color: #f4f4f4;
             line-height: 1.6;
-            font-size: 14px;
         }
 
         header {
-            background-color: #1e3c72; /* Match your logo colors */
+            background-color: #1e3c72; /* Main color from your logo */
             color: white;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -44,11 +43,10 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #1e3c72;
+            background-color: #111;
         }
 
         nav .menu-icon {
@@ -85,15 +83,11 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            opacity: 0;
-            transform: translateY(20px);
+            transition: all 0.3s ease;
         }
 
         section.active {
             display: block;
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .logo {
@@ -104,6 +98,7 @@
 
         h1, h2 {
             text-align: center;
+            font-size: 1.5em;
         }
 
         footer {
@@ -183,14 +178,14 @@
 </head>
 <body>
     <header>
-        <img src="your-logo.png" alt="Programming Hub Logo" class="logo">
+        <img src="/th.jpg" alt="Programming Hub Logo" class="logo">
         <h1>TheProgrammingHub</h1>
         <p>Your hub for all coding and tech interests</p>
         <nav>
-            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
             <ul id="menu">
                 <li><a href="#home" onclick="showSection('home')">Home</a></li>
-                <li><a href="#whoami" onclick="showSection('whoami')">Who Am I</a></li>
+                <li><a href="#whoami" onclick="showSection('whoami')">Who Are We</a></li>
                 <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
                 <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
             </ul>
@@ -209,8 +204,9 @@
         </section>
 
         <section id="whoami">
-            <h2>Who Am I</h2>q
-            <p>Hello! We're the creators of the programming hub, passionate developers and tech enthusiasts. Welcome to our hub!</p>
+            <h2>Who Am I</h2>
+            <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
+            <p>Hello! We're the programming hub, passionate developers and tech enthusiasts. Welcome to our hub!</p>
             <p>[Detailed information about yourself, your background, your journey in tech, and your goals]</p>
             <h3>We're Capable of:</h3>
             <ul>
@@ -231,9 +227,9 @@
         <section id="projects">
             <h2>Projects</h2>
             <p>Here are some of my projects that I am proud to showcase:</p>
-            <div class="project-gallery">
+            <div class="/IMG-20240706-WA0000.jpg">
                 <div class="project">
-                    <img src="project1.jpg" alt="Project 1">
+                    <img src="/IMG-20240706-WA0000.jpg" alt="Project 1">
                     <h3>OmniGuard Antivirus</h3>
                     <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
                     <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
@@ -271,29 +267,41 @@
     </footer>
     <script>
         function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
             } else {
-                menu.style.display = 'block';
+                menu.style.display = "block";
             }
         }
 
         function showSection(sectionId) {
-            var sections = document.querySelectorAll('main section');
-            sections.forEach(function(section) {
-                section.classList.remove('active');
+            var sections = document.querySelectorAll("main section");
+            sections.forEach(function (section) {
+                section.classList.remove("active");
             });
-            document.getElementById(sectionId).classList.add('active');
+            var activeSection = document.getElementById(sectionId);
+            activeSection.classList.add("active");
 
-            var menu = document.getElementById('menu');
+            var menu = document.getElementById("menu");
             if (window.innerWidth <= 768) {
-                menu.style.display = 'none';
+                menu.style.display = "none";
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        // Automatically display the home section on page load
+        document.addEventListener("DOMContentLoaded", function() {
             showSection('home');
+        });
+
+        // Hide menu on window resize
+        window.addEventListener("resize", function() {
+            var menu = document.getElementById("menu");
+            if (window.innerWidth > 768) {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
         });
     </script>
 </body>
