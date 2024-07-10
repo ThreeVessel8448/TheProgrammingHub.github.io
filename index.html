@@ -4,37 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheProgrammingHub</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Import Source Sans Pro font */
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+        /* Reset and basic styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #051e30;
             line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
         }
 
+        /* Header styles */
         header {
-            background-color: #1e3c72; /* Main color from your logo */
+            background-color: #77c2f7;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            animation: slideInDown 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 80px;
+            margin-left: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        /* Navigation styles */
         nav {
             position: relative;
+            width: 100%;
         }
 
         nav ul {
-            list-style-type: none;
+            list-style: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: #333;
+            display: flex;
+            justify-content: center;
+            background-color: #051e30;
+            animation: slideInRight 1s ease-in-out;
         }
 
         nav ul li {
-            float: left;
+            margin: 0;
         }
 
         nav ul li a {
@@ -43,10 +78,14 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            transition: 0.3s ease;
+            background-color: #77c2f7;
+            transform: 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #111;
+            background-color: #77c2f7;
+            transform: scale(1.1);
         }
 
         nav .menu-icon {
@@ -55,19 +94,23 @@
             font-size: 24px;
             color: white;
             padding: 14px 16px;
+            position: absolute;
+            left: -10px;
+            top: -30px;
         }
 
         @media (max-width: 768px) {
             nav ul {
                 display: none;
+                flex-direction: column;
                 position: absolute;
-                top: 50px;
+                top: 20px;
+                left: 0;
                 width: 100%;
-                background-color: #333;
+                background-color: #77c2f7;
             }
 
             nav ul li {
-                float: none;
                 width: 100%;
             }
 
@@ -76,44 +119,71 @@
             }
         }
 
+        /* Section styles */
         section {
-            display: none;
             padding: 60px 20px;
             margin: 20px 0;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
             transition: all 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
         }
 
         section.active {
             display: block;
+            animation: fadeInUp 1s ease-in-out;
         }
 
-        .logo {
-            max-width: 150px;
-            display: block;
-            margin: 0 auto 20px;
+        /* Divider line styles */
+        section h1, section h2, section p {
+            border-bottom: 1px solid #1e3c72;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
 
+        /* Typography */
         h1, h2 {
             text-align: center;
             font-size: 1.5em;
+            color: #1e3c72;
         }
 
+        /* Footer styles */
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #1e3c72;
+            background: #051e30;
             color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s ease;
         }
 
+        footer a:hover {
+            color: #77c2f7;
+        }
+
+        .instagram-icon {
+            color: purple;
+        }    
+
+        /* Contact form */
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .contact-form label {
@@ -124,27 +194,36 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #1e3c72;
         }
 
         .contact-form button {
-            padding: 10px;
+            padding: 10px 20px;
             border: none;
             background-color: #1e3c72;
             color: white;
             font-size: 16px;
             cursor: pointer;
             border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .contact-form button:hover {
             background-color: #14508e;
+            transform: scale(1.05);
         }
 
+        /* Project gallery */
         .project-gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .project {
@@ -154,6 +233,13 @@
             padding: 20px;
             text-align: center;
             width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .project img {
@@ -169,25 +255,57 @@
             color: white;
             text-decoration: none;
             border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .project a:hover {
             background-color: #14508e;
+            transform: scale(1.05);
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            from { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            to { transform: scale(1); }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="/th.jpg" alt="Programming Hub Logo" class="logo">
-        <h1>TheProgrammingHub</h1>
+        <div class="header-container">
+            <h1>TheHub</h1>
+            <img src="/th.jpg" alt="Programming Hub Logo" class="logo">
+        </div>
         <p>Your hub for all coding and tech interests</p>
         <nav>
-            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+            <span class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></span>
             <ul id="menu">
-                <li><a href="#home" onclick="showSection('home')">Home</a></li>
-                <li><a href="#whoami" onclick="showSection('whoami')">Who Are We</a></li>
-                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
-                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                <li><a href="#home" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#whoami" onclick="showSection('whoami')"><i class="fas fa-user"></i> Who Are We</a></li>
+                <li><a href="#projects" onclick="showSection('projects')"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -205,8 +323,31 @@
 
         <section id="whoami">
             <h2>Who Are We</h2>
-            <p>Hello! We're the programming hub, passionate developers and tech enthusiasts. Welcome to our hub!</p>
-            <p>[Detailed information about yourself, your background, your journey in tech, and your goals]</p>
+            <p>Hello! We're the creators of  theprogramminghub, passionate developers and tech enthusiasts. Welcome to our hub!</p>
+            <h3>Our Background</h3>
+            <p>At TheProgramming Hub, we come from diverse backgrounds, united by our intests for technology and programming. Our journey started with a simple idea: to create a space where developers and tech enthusiasts can come together to share knowledge, learn new skills, and work on exciting projects.</p>
+            <h3>Our Goals</h3>
+            <p><p>Our primary goal is to empower individuals to achieve their full potential in the tech world. Here's how we aim to accomplish this:</p>
+
+<ol>
+    <li>
+        <strong>Knowledge Sharing:</strong> We believe in the power of community and knowledge sharing. Through our platform, we provide tutorials, coding tips, and resources to help both beginners and experienced developers improve their skills.
+    </li>
+    <li>
+        <strong>Project Showcasing:</strong> We are proud of the projects we've worked on and aim to showcase them to inspire others. Our project gallery features a diverse range of work, from practical applications to innovative solutions, demonstrating what can be achieved with dedication and creativity.
+    </li>
+    <li>
+        <strong>Collaboration and Networking:</strong> At TheProgramming Hub, we encourage collaboration and networking. We provide a platform for tech enthusiasts to connect, discuss ideas, and work on joint projects. By fostering a collaborative environment, we aim to drive innovation and creativity.
+    </li>
+    <li>
+        <strong>Community Building:</strong> Building a strong, supportive community is at the heart of what we do. We organize events, webinars, and discussions to bring our community together, enabling members to learn from each other and grow collectively.
+    </li>
+    <li>
+        <strong>Continuous Learning:</strong> Technology is ever-evolving, and so are we. We strive to stay at the forefront of technological advancements and continuously update our knowledge base. By doing so, we ensure that our community has access to the latest trends, tools, and techniques in the tech world.
+    </li>
+</ol></p
+            <h3>Join Us</h3>
+            <p>We invite you to join us on our journey to explore the fascinating world of technology. Whether you are a seasoned developer, a curious beginner, or someone looking to collaborate on exciting projects, TheProgramming Hub has something for you. Together, we can learn, innovate, and make a meaningful impact in the tech world.</p>
             <h3>We're Capable of:</h3>
             <ul>
                 <li>Web Development</li>
@@ -219,19 +360,19 @@
                         <li>Python and more!!</li>
                     </ul>
                 </li>
-                <li>We Can Help You If You Want To 🙂</li>
+                <li>For More Details, Go to the "contact us" section.</li>
             </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>Here are some of my projects that I am proud to showcase:</p>
+            <p>Here are some of our projects that We're proud to showcase:</p>
             <div class="/IMG-20240706-WA0000.jpg">
                 <div class="project">
                     <img src="/IMG-20240706-WA0000.jpg" alt="Project 1">
                     <h3>OmniGuard Antivirus</h3>
                     <p>OmniGuard Antivirus is a comprehensive and user-friendly antivirus solution designed to provide robust protection for your Windows system. Developed as a batch script, it offers an easy-to-use interface and essential antivirus functionalities, making it a reliable choice for everyday use.</p>
-                    <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus" target="_blank">Download/Visit</a>
+                    <a href="https://github.com/ThreeVessel8448/OmniGuard-Antivirus/blob/main/OmniGuard%20Antivirus.exe" target="_blank">Download/Visit</a>
                 </div>
                 <div class="project">
                     <img src="project2.jpg" alt="Project 2">
@@ -242,27 +383,51 @@
                 <!-- Add more projects as needed -->
             </div>
         </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or want to collaborate? Reach out to us!</p>
-            <form action="submit_contact_form.php" method="post" class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+        
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("gZ5VbHGBY16umGeHF"); // Replace with your EmailJS User ID
+        })();
+    </script>
+   
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to collaborate? Reach out to us!</p>
+        <form id="contact-form" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <!-- Your existing JavaScript -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Use EmailJS to send the form data
+            emailjs.sendForm('service_ponu8jm', 'template_2hvnh8p', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('contact-form').reset(); // Reset the form after successful submission
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Oops! Something went wrong. Please try again later.');
+                });
+        });
+    </script>
+</body>
     </main>
     <footer>
+        <p>Connect with us on social media!</p>
+        <a href="https://github.com/ThreeVessel8448" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com/theprogramminghub3" target="_blank" class="instagram-icon"><i class="fab fa-instagram"></i></a>
         <p>&copy; 2024 TheProgrammingHub. All rights reserved.</p>
-        <p>
-            <a href="https://github.com/ThreeVessel8448" target="_blank">GitHub</a> | 
-            <a href="https://www.instagram.com/theprogramminghub3" target="_blank">Instagram</a>
-        </p>
     </footer>
     <script>
         function toggleMenu() {
