@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheProgrammingHub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
     <style>
         /* Import Source Sans Pro font */
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+        
 
         /* Reset and basic styling */
         body {
@@ -306,6 +308,7 @@
                 <li><a href="#whoami" onclick="showSection('whoami')"><i class="fas fa-user"></i> Who Are We</a></li>
                 <li><a href="#projects" onclick="showSection('projects')"><i class="fas fa-code"></i> Projects</a></li>
                 <li><a href="#contact" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -445,6 +448,15 @@
                 menu.style.display = "block";
             }
         }
+        
+        function toggleWhatsNew() {
+    var whatsNewSection = document.getElementById("whatsnew");
+    if (whatsNewSection.style.display === "block") {
+        whatsNewSection.style.display = "none";
+    } else {
+        whatsNewSection.style.display = "block";
+    }
+}
 
         function showSection(sectionId) {
             var sections = document.querySelectorAll("main section");
@@ -476,4 +488,4 @@
         });
     </script>
 </body>
-                                                                                                      </html>
+</html>
