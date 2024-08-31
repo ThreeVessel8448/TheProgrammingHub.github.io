@@ -96,20 +96,34 @@ section h1, section h2, section p {
     padding-bottom: 10px;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+section h1:hover, section h2:hover, section p:hover {
+    border-color: #14508e;
+    transform: scale(1.02);
 }
 
 h1, h2 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #1e3c72;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    color: #14508e;
+    transform: scale(1.1);
 }
 
 h3, p {
-  text-align: center;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
+p:hover {
+    transform: scale(1.05);
+}
 footer {
     text-align: center;
     padding: 10px 0;
