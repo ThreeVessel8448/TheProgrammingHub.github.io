@@ -30,7 +30,13 @@ body {
     line-height: 1.6;
     animation: fadeIn 2s ease-in-out;
     transition: background-color 0.3s ease;
+    
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 header {
     background-color: #77c2f7;
@@ -106,9 +112,10 @@ section h1:hover, section h2:hover, section p:hover {
 
 h1, h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #1e3c72;
     transition: color 0.3s ease, transform 0.3s ease;
+    animation: textPop 1.5s ease-in-out;
 }
 
 h1:hover, h2:hover {
@@ -118,12 +125,15 @@ h1:hover, h2:hover {
 
 h3, p {
     text-align: center;
-    transition: transform 0.3s ease;
+    font-size: 1.2em;
+    color: #666;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 p:hover {
     transform: scale(1.05);
 }
+
 footer {
     text-align: center;
     padding: 10px 0;
@@ -156,7 +166,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    animation: fadeInUp 1s ease-in-out;
+    animation: bounceIn 1.5s ease-in-out;
 }
 
 .contact-form label {
@@ -191,6 +201,20 @@ footer a:hover {
     transform: scale(1.05);
 }
 
+.parallax {
+    background: url('your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .carousel {
     position: relative;
     max-width: 800px;
@@ -222,54 +246,55 @@ footer a:hover {
 
   .project {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 30px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
 
-  .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.project:hover {
+    transform: translateY(-15px) rotate(-1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
-  .project img {
+.project img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 16px;
     transition: transform 0.3s ease;
-  }
+}
 
-  .project img:hover {
-    transform: scale(1.05);
-  }
+.project img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
 
-  .project h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
+.project h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
     color: #333;
-  }
+}
 
-  .project p {
-    font-size: 1rem;
+.project p {
+    font-size: 1.1rem;
     color: #666;
-  }
+    margin: 20px 0;
+}
 
-  .project a {
+.project a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #1e3c72;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #14508e;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
-  .project a:hover {
-    background-color: #14508e;
-    transform: scale(1.05);
-  }
+.project a:hover {
+    background-color: #1e3c72;
+    transform: scale(1.1);
+}
 
   .carousel-control-prev,
   .carousel-control-next {
@@ -313,6 +338,20 @@ footer a:hover {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
+
+  @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.project {
+    animation: float 6s ease-in-out infinite;
+}
+
   
   
 @keyframes fadeIn {
